@@ -8,6 +8,6 @@
         aws_secret_key: "{{ secert_key }}"
         region: "{{ region }}"
         bucket: "{{ bucket_name }}"
-        object: "/pp.zip"
-        dest: "/opt/pp.zip"
+        object: "/cloud.zip"
+        dest: "/opt/cloud.zip"
         mode: get
