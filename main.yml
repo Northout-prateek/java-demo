@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+    - name: Download file from S3 bucket
+      aws_s3:
+        aws_access_key: "AKIAXJFRMK2V5FM2GUUZ"
+        aws_secret_key: "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"
+        region: "us-east-2"
+        bucket: "cloud-celery"
+        object: "/pp.zip"
+        dest: "/opt/pp.zip"
+        mode: get
