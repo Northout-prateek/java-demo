@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+    - name: Download file from S3 bucket
+      aws_s3:
+        aws_access_key: '{{ access_key }}'
+        aws_secret_key: '{{ sec_key }}'
+        region: "us-east-2"
+        bucket: "cloud-celery"
+        object: "/cloud.zip"
+        dest: "cloud.zip"
+        mode: get
